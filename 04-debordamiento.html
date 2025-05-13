@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <style>
+      div {
+        background-color: palegoldenrod;
+        outline: solid;
+        margin-bottom: 16px;
+      }
+      .overflow-types {
+        background-color: white;
+        outline: none;
+      }
+      .overflow-types p {
+        text-decoration: underline;
+        font-size: 30px;
+        margin-bottom: 16px;
+      }
+      .overflow-types .tamaño-definido {
+        width: 150px;
+        height: 120px;
+        margin-bottom: 100px;
+      }
+
+      /*Overflow tiene valores como:
+                visible: el contenido desbordante es visible (valor por defecto)
+                hidden: el contenido desbordante es ocultado
+                scroll: el contenido desbordante es ocultado pero se puede desplazar
+                auto: el contenido desbordante es ocultado pero se puede desplazar si es necesario
+                clip: el contenido desbordante es ocultado pero se puede desplazar si es necesario
+                initial: establece el valor por defecto de la propiedad
+                inherit: hereda el valor de su elemento padre
+        */
+
+      .overflow-types .tamaño-definido:nth-child(2) {
+        overflow: visible;
+        background-color: lightblue;
+      }
+
+      .overflow-types .tamaño-definido:nth-child(3) {
+        overflow: hidden;
+        background-color: lightgreen;
+      }
+
+      .overflow-types .tamaño-definido:nth-child(4) {
+        overflow: scroll;
+        background-color: lightcoral;
+      }
+
+      .overflow-types .tamaño-definido:nth-child(5) {
+        overflow: auto;
+        background-color: lightpink;
+      }
+
+      .overflow-types .tamaño-definido:nth-child(6) {
+        overflow: clip;
+        background-color: lightyellow;
+      }
+
+      .overflow-types .tamaño-definido:nth-child(7) {
+        overflow: initial;
+        background-color: lightgray;
+      }
+
+      .overflow-types .tamaño-definido:nth-child(8) {
+        overflow: inherit;
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      El ancho y alto de esta caja se adaptará de manera fluida según las
+      necesidades de su contenido. Si el ancho disponible es grande, requerirá
+      menos altura. Si se reduce el ancho disponible, aumentará su altura para
+      contener el texto adecuadamente.
+    </div>
+
+    <div class="overflow-types">
+      <p>Over-flow types</p>
+
+      <div class="tamaño-definido">
+        <p>visible</p>
+        Esta caja tiene un ancho y alto definidos en 100px. El texto se adapta
+        al ancho de 100px generando nuevas líneas pero termina produciendo un
+        desbordamiento vertical.
+      </div>
+
+      <div class="tamaño-definido">
+        <p>hidden</p>
+        Esta caja tiene un ancho y alto definidos en 100px. El texto se adapta
+        al ancho de 100px generando nuevas líneas pero termina produciendo un
+        desbordamiento vertical.
+      </div>
+
+      <div class="tamaño-definido">
+        <p>scroll</p>
+        Esta caja tiene un ancho y alto definidos en 100px. El texto se adapta
+        al ancho de 100px generando nuevas líneas pero termina produciendo un
+        desbordamiento vertical.
+        
+      </div>
+
+      <div class="tamaño-definido">
+        <p>auto</p>
+        Esta caja tiene un ancho y alto definidos en 100px. El texto se adapta
+        al ancho de 100px generando nuevas líneas pero termina produciendo un
+        desbordamiento vertical.
+
+      </div>
+
+      <div class="tamaño-definido">
+        <p>clip</p>
+        Esta caja tiene un ancho y alto definidos en 100px. El texto se adapta
+        al ancho de 100px generando nuevas líneas pero termina produciendo un
+        desbordamiento vertical.
+      </div>
+
+      <div class="tamaño-definido">
+        <p>initial</p>
+        Esta caja tiene un ancho y alto definidos en 100px. El texto se adapta
+        al ancho de 100px generando nuevas líneas pero termina produciendo un
+        desbordamiento vertical.
+      </div>
+
+      <div class="tamaño-definido">
+        <p>inherit</p>
+        Esta caja tiene un ancho y alto definidos en 100px. El texto se adapta
+        al ancho de 100px generando nuevas líneas pero termina produciendo un
+        desbordamiento vertical.
+      </div>
+    </div>
+  </body>
+</html>
