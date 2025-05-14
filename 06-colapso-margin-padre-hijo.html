@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejemplo de Margin Collapsing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h3 {
+            margin-top: 30px;
+        }
+        
+        /* CASO 1: Sin margin collapse - Con bordes */
+        .padre-con-borde {
+            border: 1px solid red;
+            margin-top: 50px;
+            width: 200px;
+            background-color: #ffdddd;
+        }
+        
+        /* CASO 2: Con margin collapse - Sin borde superior */
+        .padre-collapse {
+            border-left: 1px solid red;
+            border-right: 1px solid red;
+            border-bottom: 1px solid red;
+            /* border-top: 1px solid red; */
+            /* No hay border-top */
+            margin-top: 50px;
+            width: 200px;
+            background-color: #ffdddd;
+        }
+        
+        .hijo {
+            border: 1px solid blue;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 10px;
+            background-color: #ddffdd;
+        }
+        
+        /* Línea de referencia para ver mejor el margen */
+        .linea-referencia {
+            height: 1px;
+            background-color: #999;
+            margin: 0;
+        }
+        
+        .nota {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Margin Collapsing</h1>
+    
+    <h3>1. Sin Margin Collapse (con borde completo)</h3>
+    <div class="linea-referencia"></div>
+    <div class="padre-con-borde">
+        <div class="hijo">Esta es una caja hijo CSS</div>
+    </div>
+    <div class="nota">El margen del padre (50px) y el margen del hijo (30px) se aplican separadamente</div>
+    
+    <h3>2. Con Margin Collapse (sin borde superior)</h3>
+    <div class="linea-referencia"></div>
+    <div class="padre-collapse">
+        <div class="hijo">Esta es una caja hijo CSS</div>
+    </div>
+    <div class="nota">El margen del hijo "escapa" y se fusiona con el margen del padre, aplicándose solo el mayor (50px)</div>
+
+</body>
+</html>
