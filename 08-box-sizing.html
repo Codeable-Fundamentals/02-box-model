@@ -6,11 +6,23 @@
     <title>Box-sizesing</title>
   </head>
   <style>
+
+    *,
+    *::after,
+    *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     .box-one {
-        /* box-sizing: border-box; */
+      /* box-sizing: border-box;  */
+      box-sizing: border-box;
       background-color: gray;
       width: 200px;
       height: 150px;
+      padding: 60px;
+      border: 20px solid red;
       /* padding: 20px; */
     }
 
@@ -18,7 +30,13 @@
       background: gray;
       width: 200px;
       height: 150px;
-      /* padding: 20px; */
+      padding: 60px;
+      box-sizing: content-box;
+      border: 20px solid red;
+
+
+      /* padding: 30px;
+       margin: 20px; */
     }
   </style>
   <body>
